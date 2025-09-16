@@ -30,5 +30,11 @@ myMean <- function(x) {
 forfun <- c(67, 12, 42, 10)
 myMean(forfun)
 
+<<<<<<< Updated upstream
 ## Blog link: https://dleonzonlis4370.blogspot.com/2025/09/module-2-assignment.html 
+=======
+## blog link: https://dleonzonlis4370.blogspot.com/2025/09/module-2-assignment.html
+
+
+>>>>>>> Stashed changes
 
