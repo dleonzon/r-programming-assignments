@@ -1,0 +1,42 @@
+---
+title: "My Markdown Primer // Module 12 Assignment"
+author: "Dimitri Leonzon"
+date: "2025-11-15"
+output: html_document
+---
+## Blog Link: https://dleonzonlis4370.blogspot.com/2025/11/module-12-assignment.html
+
+## What is R Markdown
+R Markdown is an authoring format that documents both R and text. It's a method where we can easily structure and simply explain a chunk of code. It helps with long chunks, for example creating functions. There are some chunks of code that are confusing to decipher through its language (this is universal for all coding languages). That's why there are comments within code, for notation or for other colleagues to understand what is going on.
+
+With R Markdown, it's more structured and visibly pleasing to the eye. We can navigate through the document with ease able to share/edit the documentation if we're working with colleagues. 
+
+## Data Preparation
+To prepare the data, we are loading the ggplot2 library and importing the 'mtcars' dataset.
+```{r setup, include=FALSE}
+library(ggplot2)
+
+data(mtcars)
+str(mtcars)
+```
+
+
+## Practice Math 
+We're using the pythagorean theorem as the formula used for this assignment $x^2 + y^2 = z^2$.
+```{r}
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+geom_point(alpha = 0.8) +
+geom_smooth(method = "lm", se = FALSE, linewidth = 0.9) +
+labs(
+title = "Fuel Economy vs Horsepower",
+subtitle = "mtcars dataset; OLS trend line",
+x = "Horsepower (hp)",
+y = "Miles per Gallon (mpg)"
+) +
+theme_minimal(base_size = 13)
+
+```
+With the variables used and plotted, we can see a downtrend of where higher the horsepower, the lower Miles per Gallon. With the trendline plotted, we can visually see the pythagorean theorem being practiced.
+
+## Conclusion
+I feel that using R Markdown is much more structured than using plain text. The workflow is linear and we can work our way down the document to see how the project came to be. I think that Markdowns are great for sharing research insights and personal projects. It provides the usability of adding proper descriptions for each chunk of code without the use of spamming comments. The best feature is that the output is printed right below the chunk of code, which helps navigate throughout the document.
